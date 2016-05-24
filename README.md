@@ -62,7 +62,8 @@ This module has two functions, they both take in an srt file as input.
 `parseSrtToJson` returns a json like the one below.
 
 and can be used as follows.
-```
+
+```javascript
 //var parser = require("./index.js");
 //var srtFile = "./example/nroman_door_manual_transcription.srt"//a path to some srt file you want to open
 
@@ -74,7 +75,7 @@ parseSrt(srtFile, function(res){
 
 #### Example json output example
 
-```
+```json
   {
     "id": "1",
     "startTime": "00:00:00,160",
@@ -113,7 +114,7 @@ parseSrt(srtFile, function(res){
 
 while `parseSrtToText` returns a plain text like the one below and can be used like so.
 
-```
+```javascript
 //var parser = require("./index.js");
 //var srtFile = "./example/nroman_door_manual_transcription.srt"
 
@@ -123,6 +124,7 @@ parseSrtToText(srtFile, function(res){
 ```
 
 ### Plain text output Example
+
 ```
 There’s this door on the 10th floor I just
 hate so much.
@@ -139,7 +141,11 @@ Me too Kelsey.
 ## Examples
 You can find an example `srt` in the example folder. And some example of the output int he `example_output` folder.
 
-you can run `node index_test.js` to try out the examples.
+you can run following command in terminal to try the example
+
+```bash
+node index_test.js
+```
 
 <!--
 ## code overview
