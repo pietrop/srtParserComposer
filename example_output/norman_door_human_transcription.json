@@ -1,0 +1,320 @@
+[
+  {
+    "id": "1",
+    "startTime": "00:00:00,160",
+    "endTime": "00:00:04,890",
+    "text": "There’s this door on the 10th floor I just\nhate so much.\n"
+  },
+  {
+    "id": "3",
+    "startTime": "00:00:05,799",
+    "endTime": "00:00:11,629",
+    "text": "Goddammit!\nDo you ever get this door wrong? “pretty\n"
+  },
+  {
+    "text": "regularly.”\nHow often? “like 30% of the time.”\n",
+    "id": "4",
+    "startTime": "00:00:11,629",
+    "endTime": "00:00:12,000"
+  },
+  {
+    "id": "6",
+    "startTime": "00:00:14,290",
+    "endTime": "00:00:16,869",
+    "text": "Have you seen people misuse it?\nAll the time. Every day. Constantly.\n"
+  },
+  {
+    "id": "8",
+    "startTime": "00:00:17,500",
+    "endTime": "00:00:18,350",
+    "text": "I hate this door.\nMe too Kelsey.\n"
+  },
+  {
+    "id": "9",
+    "startTime": "00:00:18,350",
+    "endTime": "00:00:26,320",
+    "text": "But here’s the thing: as soon as you start\nlooking for confusing doors. They. Are. EVERYWHERE.\n"
+  },
+  {
+    "id": "11",
+    "startTime": "00:00:27,390",
+    "endTime": "00:00:30,789",
+    "text": "Why?\nI feel like Roman Mars would know why.\n"
+  },
+  {
+    "id": "12",
+    "startTime": "00:00:30,789",
+    "endTime": "00:00:36,879",
+    "text": "Roman: This is 99% invisible, and those doors\nyou hate are called Norman doors.\n"
+  },
+  {
+    "id": "14",
+    "startTime": "00:00:38,940",
+    "endTime": "00:00:44,468",
+    "text": "What’s a norman door?\nRoman: Don Norman wrote THE essential book about design. He is the ‘Norman’ of the\n"
+  },
+  {
+    "id": "16",
+    "startTime": "00:00:44,809",
+    "endTime": "00:00:46,99",
+    "text": "‘norman door.’\nAlright – and where is this guy?\n"
+  },
+  {
+    "id": "18",
+    "startTime": "00:00:49,219",
+    "endTime": "00:00:50,649",
+    "text": "Roman: ”You Must Go to San Diego”\nOkay!\n"
+  },
+  {
+    "id": "20",
+    "startTime": "00:00:54,930",
+    "endTime": "00:01:00,969",
+    "text": "Don: Hi joe!\nI’m Don Norman. I’m… gee it’s hard\n"
+  },
+  {
+    "text": "to describe what i am.\nRoman: Well, he’s been a Professor of psychology, professor of cognitive science, professor\n",
+    "id": "21",
+    "startTime": "00:01:00,969",
+    "endTime": "00:01:04,800"
+  },
+  {
+    "id": "23",
+    "startTime": "00:01:10,720",
+    "endTime": "00:01:15,250",
+    "text": "of computer science, a vice president of advanced technology at apple. But for our purposes\nDon: I was spending a year living in Cambridge, England, and I got so frustrated with my inability\n"
+  },
+  {
+    "id": "25",
+    "startTime": "00:01:22,970",
+    "endTime": "00:01:35,30",
+    "text": "to use the light switches and the water taps and the doors even, that I wrote this book.\nIf I continually get a door wrong, is it my\n"
+  },
+  {
+    "text": "fault?\nDon: No.\n",
+    "id": "26",
+    "startTime": "00:01:35,30",
+    "endTime": "00:01:38,50"
+  },
+  {
+    "id": "28",
+    "startTime": "00:01:43,470",
+    "endTime": "00:01:47,730",
+    "text": "Roman: A norman door is one where the design tells you to do the opposite of what you’re\nactually supposed to do, or gives the wrong signal and needs a sign to correct it.\n"
+  },
+  {
+    "id": "30",
+    "startTime": "00:01:51,930",
+    "endTime": "00:01:55,950",
+    "text": "Don: Why is such a simple thing, why does it need an instruction manual? That is, why\ndo you have to have a sign that says Push\n"
+  },
+  {
+    "text": "or Pull. Why not make it obvious?\nRoman: It can be obvious if it’s designed\n",
+    "id": "31",
+    "startTime": "00:01:55,950",
+    "endTime": "00:01:58,820"
+  },
+  {
+    "text": "right.\nDon: There are a couple really basic principles of design, and one of them i’ll call discoverability.\n",
+    "id": "32",
+    "startTime": "00:01:58,820",
+    "endTime": "00:02:05,470"
+  },
+  {
+    "id": "34",
+    "startTime": "00:02:10,840",
+    "endTime": "00:02:14,330",
+    "text": "When I look at something, i should be able to discover what operations i can do.\nRoman: The principle applies to a whole lot more than doors.\n"
+  },
+  {
+    "id": "35",
+    "startTime": "00:02:14,330",
+    "endTime": "00:02:19,000",
+    "text": "Don: \"And it’s amazing with many of our\ncomputer systems today, you can look at it\n"
+  },
+  {
+    "id": "37",
+    "startTime": "00:02:24,000",
+    "endTime": "00:02:30,60",
+    "text": "and there’s no way of knowing what’s possible. Should i tap it once, or twice, or even triple\ntap? Discoverability, when it’s not there,\n"
+  },
+  {
+    "text": "well you don’t know how to use something.”\nRoman: Another is feedback.\n",
+    "id": "38",
+    "startTime": "00:02:30,60",
+    "endTime": "00:02:32,530"
+  },
+  {
+    "id": "39",
+    "startTime": "00:02:32,530",
+    "endTime": "00:02:37,920",
+    "text": "Don: So many times, there’s no feedback\n– you don’t know what happened, or why\n"
+  },
+  {
+    "id": "41",
+    "startTime": "00:02:38,310",
+    "endTime": "00:02:42,870",
+    "text": "it happened.\nRoman: And these principles form the basis of how designers and engineers work today:\n"
+  },
+  {
+    "id": "43",
+    "startTime": "00:02:46,100",
+    "endTime": "00:02:51,970",
+    "text": "commonly known as User- or human-centered design.\nDon: I decided user was a bit degrading, why not call people people?\n"
+  },
+  {
+    "id": "45",
+    "startTime": "00:02:56,630",
+    "endTime": "00:03:03,750",
+    "text": "It’s amazingly simple, and amazingly seldom practiced.” We call it iterative because\nit goes around in a circle. We observe what is happening today, people doing the task.\n"
+  },
+  {
+    "id": "47",
+    "startTime": "00:03:09,560",
+    "endTime": "00:03:15,890",
+    "text": "And from that, we say we have some ideas. Here’s what we propose to do.\nJoe: Then you prototype the solution, and\n"
+  },
+  {
+    "text": "test it.\nAnd  this process has spread all over the world, and is improving lives - from better every\n",
+    "id": "48",
+    "startTime": "00:03:15,890",
+    "endTime": "00:03:27,950"
+  },
+  {
+    "id": "49",
+    "startTime": "00:03:27,950",
+    "endTime": "00:03:33,69",
+    "text": "day things like the ones Don wrote about,\nto using the process to solve huge problems\n"
+  },
+  {
+    "id": "51",
+    "startTime": "00:03:38,30",
+    "endTime": "00:03:40,940",
+    "text": "in public health in developing countries – water, sanitation, farming, and lots more.\nSo what’d be a better, human centered door?\n"
+  },
+  {
+    "id": "52",
+    "startTime": "00:03:40,940",
+    "endTime": "00:03:47,390",
+    "text": "Don: An ideal door is one where that as I\nwalk up to it and walk through it. I’m not\n"
+  },
+  {
+    "id": "54",
+    "startTime": "00:03:50,340",
+    "endTime": "00:03:50,660",
+    "text": "even aware that I had opened a door and shut it. And I don’t have to be aware because\nit’s so well designed that it’s just automatic.\n"
+  },
+  {
+    "id": "55",
+    "startTime": "00:03:50,660",
+    "endTime": "00:03:55,340",
+    "text": "So if you had a door which had a flat plate,\nwhat could you do? Nothing. The only thing\n"
+  },
+  {
+    "id": "56",
+    "startTime": "00:03:55,340",
+    "endTime": "00:04:00,670",
+    "text": "you can do is push. So, see? You don’t need\na sign. Flat plate – you push.\n"
+  },
+  {
+    "id": "57",
+    "startTime": "00:04:00,670",
+    "endTime": "00:04:04,849",
+    "text": "Roman: This kind of push bar with the piece\nsticking out on one side works well too, so\n"
+  },
+  {
+    "id": "58",
+    "startTime": "00:04:04,849",
+    "endTime": "00:04:06,950",
+    "text": "you can see what side you’re supposed to\npush on\n"
+  },
+  {
+    "id": "59",
+    "startTime": "00:04:06,950",
+    "endTime": "00:04:12,339",
+    "text": "Don: Vertical bars could go either way. A\nsimple little hand thing sort of indicates\n"
+  },
+  {
+    "id": "61",
+    "startTime": "00:04:12,840",
+    "endTime": "00:04:18,540",
+    "text": "pull.\nRoman: But we still have terrible, terrible\n"
+  },
+  {
+    "text": "doors in the world. So many of them.\nDon: There are lots of things in life are\n",
+    "id": "62",
+    "startTime": "00:04:18,540",
+    "endTime": "00:04:24,20"
+  },
+  {
+    "text": "fairly standardized. Whether I buy this house\nor not is not a function of whether it has\n",
+    "id": "63",
+    "startTime": "00:04:24,20",
+    "endTime": "00:04:30,510"
+  },
+  {
+    "text": "good doors in it. Except for safety reasons,\ndoors tend not to be improved.\n",
+    "id": "64",
+    "startTime": "00:04:30,510",
+    "endTime": "00:04:31,950"
+  },
+  {
+    "id": "66",
+    "startTime": "00:04:34,990",
+    "endTime": "00:04:39,919",
+    "text": "Roman: But the tyranny of bad doors must end.\nI think that it’s a really shitty design\n"
+  },
+  {
+    "text": "the fact that the put A PULL HANDLE when it’s\na push. So it should be a flat panel here.\n",
+    "id": "67",
+    "startTime": "00:04:39,919",
+    "endTime": "00:04:44,349"
+  },
+  {
+    "text": "And not a GODDAMN pull handle. that’s how\ni feel about this door. it’s very misleading.\n",
+    "id": "68",
+    "startTime": "00:04:44,350",
+    "endTime": "00:04:48,680"
+  },
+  {
+    "text": "(I agree)\nRoman: You’re right becky. You’re goddamned\n",
+    "id": "69",
+    "startTime": "00:04:48,680",
+    "endTime": "00:04:54,150"
+  },
+  {
+    "text": "right. And if we all thought like you, well,\nwe might just design better world together.\n",
+    "id": "70",
+    "startTime": "00:04:54,150",
+    "endTime": "00:04:56,219"
+  },
+  {
+    "id": "71",
+    "startTime": "00:04:56,220",
+    "endTime": "00:05:07,750",
+    "text": "\"It won't open because it's a security door!\"\n\"What the **** are you two doing in here?\"\n"
+  },
+  {
+    "id": "72",
+    "startTime": "00:05:07,750",
+    "endTime": "00:05:12,540",
+    "text": "Hey, so as you can see, since I started making\nthis video, they've since changed the door\n"
+  },
+  {
+    "id": "73",
+    "startTime": "00:05:12,540",
+    "endTime": "00:05:16,570",
+    "text": "a little bit. Guess it's a step in the right\ndirection. Thank you so much for watching\n"
+  },
+  {
+    "id": "74",
+    "startTime": "00:05:16,570",
+    "endTime": "00:05:21,550",
+    "text": "and to 99% invisible, one of my favorite podcasts,\nit was so much fun getting to collaborate\n"
+  },
+  {
+    "id": "75",
+    "startTime": "00:05:21,550",
+    "endTime": "00:05:26,849",
+    "text": "with with them. Check them out on any podcast\napp or 99pi.org.\n"
+  }
+]

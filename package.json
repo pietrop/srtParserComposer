@@ -1,0 +1,11 @@
+{
+  "name": "srt_to_plain_text",
+  "version": "1.0.0",
+  "description": "A quick scrip to convert srt into plain text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pietro Passarelli <pietro.passarelli@gmail.com> (http://pietropassarelli.com)",
+  "license": "ISC"
+}
