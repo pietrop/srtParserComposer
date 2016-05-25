@@ -1,11 +1,28 @@
 {
-  "name": "srt_to_plain_text",
+  "name": "srt_parser_composer",
   "version": "1.0.0",
-  "description": "A quick scrip to convert srt into plain text",
+  "description": "A couple of modules to parse and generate srt files. No external dependencies needed.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pietro Passarelli <pietro.passarelli@gmail.com> (http://pietropassarelli.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pietrop/srtParserComposer.git"
+  },
+  "keywords": [
+    "srt",
+    "parser",
+    "csv",
+    "json"
+  ],
+  "bugs": {
+    "url": "https://github.com/pietrop/srtParserComposer/issues"
+  },
+  "homepage": "https://github.com/pietrop/srtParserComposer#readme"
 }

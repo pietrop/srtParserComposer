@@ -5,6 +5,24 @@ A couple of modules to parse and generate srt files. No external dependencies ne
 - create an srt file from json
 - parse an srt file into a csv file.
 
+## Usage
+
+Install `npm install srt_parser_composer`
+
+require
+
+```javascript
+var srtParser  = require('srt_parser_composer').parser;
+var srtComposer  = require('srt_parser_composer').composer;
+var srtToCsv  = require('srt_parser_composer').srtToCsv;
+```
+
+or
+
+```javascript
+var srt  = require('srt_parser_composer');
+```
+
 ## Parser
 Give an `srt` file it returns json or a plain text of all the lines.
 
@@ -60,7 +78,7 @@ There’s this door on the 10th floor I just
 hate so much.
 ```
 
-### The srt parser has for possible outputs - srt parser
+### The srt parser has four possible outputs - srt parser
 The parser has 4 functions,
 
 they both take in an srt file (file path/name) as input `parseSrtFileToJson` returns a json and `parseSrtFileToText` returns plain text without timecodes.
@@ -74,8 +92,8 @@ You can also parse the content of an srt file, what I refer to as an `srt string
 and can be used as follows.
 
 ```javascript
-//var parser = require("./index.js");
-var srtParser  = require('./index.js').parser;
+//var parser = require("srt_parser_composer");
+var srtParser  = require('srt_parser_composer').parser;
 var srtFile = './example/nroman_door_manual_transcription.srt'
 
 srtParser.parseSrtFileToJson(srtFile, function(res){
@@ -129,7 +147,7 @@ while `parseSrtFileToText` returns a plain text like the one below and can be us
 
 ```javascript
 var fs = require('fs');
-var srtParser  = require('./index.js').parser;
+var srtParser  = require('srt_parser_composer').parser;
 var srtFile = './example/nroman_door_manual_transcription.srt'
 
 srtParser.parseSrtFileToText(srtFile, function(res){
@@ -182,7 +200,7 @@ For example of `srt json` specs see [`example_output/norman_door_human_transcrip
 
 ```javascript
 var fs = require('fs');
-var srtComposer  = require('./index.js').composer;
+var srtComposer  = require('srt_parser_composer').composer;
 
 var srtJson = './example_output/norman_door_human_transcription.json';
 var srtJsonContent = JSON.parse(fs.readFileSync(srtJson).toString());
@@ -217,7 +235,7 @@ A google spreadsheet is generally the most effective. With this module you can c
 Takes in file path/name of the srt file, the desired name/path for the csv file, and the callback returns the csv file name you specified once it's done writing to disk.
 
 ```javascript
-var srtToCsv  = require('./index.js').srtToCsv;
+var srtToCsv  = require('srt_parser_composer').srtToCsv;
 
 var demoCsvFile = './example_output/demo_test.csv'
 
@@ -230,8 +248,9 @@ srtToCsv(srtFile, demoCsvFile, function(resCsvPathFileName){
 You can run the example with
 
 ```bash
-node composer_test.js
+node index_test.js
 ```
+
 
 <!--  
 ## CSV to srt
