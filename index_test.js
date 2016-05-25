@@ -1,6 +1,7 @@
 var fs = require('fs');
 var srtParser  = require('./index.js').parser;
 var srtComposer  = require('./index.js').composer;
+var srtToCsv  = require('./index.js').srtToCsv;
 
 console.log("************* Parser ********************\n\n\n\n")
 /**
@@ -8,6 +9,7 @@ console.log("************* Parser ********************\n\n\n\n")
 */
 
 var srtFile = './example/nroman_door_manual_transcription.srt'
+
 console.log("Test parseSrtFileToJson\n")
 srtParser.parseSrtFileToJson(srtFile, function(res){
   console.log(JSON.stringify(res))
@@ -58,4 +60,15 @@ console.log("*****************************************\n\n")
 console.log("Test createSrtFile\n")
 srtComposer.createSrtFile(JsonToSrtTest,srtJsonContent, function(resSrtFilePath){
   console.log(resSrtFilePath)
+})
+
+
+
+/**
+* srt to CSV
+*/
+
+var demoCsvFile = './example_output/demo_test.csv'
+srtToCsv(srtFile, demoCsvFile, function(resCsvPathFileName){
+  console.log(resCsvPathFileName);
 })

@@ -1,4 +1,4 @@
-# srt parser and composer
+# srt parser and composer to json and csv
 A couple of modules to parse and generate srt files. No external dependencies needed.
 
 ## Parser
@@ -198,12 +198,43 @@ srtComposer.createSrtFile(JsonToSrtTest,srtJsonContent, function(resSrtFilePath)
 })
 ```
 
+## Srt file to CSV
+Sometimes you want to share an srt and get some feedback on it.
+A google spreadsheet is generally the most effective. With this module you can convert your srt to a csv file, so that it can be uploaded to google spreadsheet, or some other use case.
+
+| 1  | 00:00:00,160  | 00:00:04,890  |There’s this door on the 10th floor I just hate so much.   |   
+| 2  | 00:00:04,890  |   00:00:05,798 | Goddammit!  |   
+| 3  |  00:00:05,799 | 00:00:11,629  |  Do you ever get this door wrong? “pretty
+regularly.” |   
+|  4 | 00:00:11,629  | 00:00:12,000  |  How often? “like 30% of the time.” |   
+
+### Usage
+Takes in file path/name of the srt file, the desired name/path for the csv file, and the callback returns the csv file name you specified once it's done writing to disk.
+
+```javascript
+var srtToCsv  = require('./index.js').srtToCsv;
+
+var demoCsvFile = './example_output/demo_test.csv'
+
+srtToCsv(srtFile, demoCsvFile, function(resCsvPathFileName){
+  console.log(resCsvPathFileName);
+})
+```
+
 ## Examples
 You can run the example with
 
 ```bash
 node composer_test.js
 ```
+
+<!--  
+## CSV to srt
+I haven't implemented this as there is an issue with the parsing of the csv and the comma present in the timecodes.
+could use an external library,but wanted to keep these modules dependency free for now, to make them more stable on the long run.
+Also don't have a use case for it where you'd need to go from a csv to an srt right now. 
+-->
+
 
 <!--
 ## code overview
