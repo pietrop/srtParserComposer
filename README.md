@@ -1,10 +1,10 @@
-# srt parser and composer to json and csv
+# srt parser and composer
 A couple of modules to parse and generate srt files. No external dependencies needed.
+I can parse an srt file or srt string (content of an srt file) into a json or plain text.
+It can also parse an srt file into a csv file.
 
 ## Parser
 Give an `srt` file it returns json or a plain text of all the lines.
-
-
 
 ### Srt file
 See exampel in [`nroman_door_manual_transcription.srt`](./example/nroman_door_manual_transcription.srt)
@@ -232,7 +232,7 @@ node composer_test.js
 ## CSV to srt
 I haven't implemented this as there is an issue with the parsing of the csv and the comma present in the timecodes.
 could use an external library,but wanted to keep these modules dependency free for now, to make them more stable on the long run.
-Also don't have a use case for it where you'd need to go from a csv to an srt right now. 
+Also don't have a use case for it where you'd need to go from a csv to an srt right now.
 -->
 
 
