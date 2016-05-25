@@ -82,7 +82,9 @@ srtParser.parseSrtFileToJson(srtFile, function(res){
 ```
 
 
-##### Example json output example
+##### Example json output
+
+[`example_output/norman_door_human_transcription.json`](./example_output/norman_door_human_transcription.json)
 
 ```json
   {
