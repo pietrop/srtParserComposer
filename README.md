@@ -155,7 +155,7 @@ You can find an example `srt` in the example folder. And some example of the out
 you can run following command in terminal to try the example
 
 ```bash
-node index_test.js
+node parser_test.js
 ```
 
 <!--
