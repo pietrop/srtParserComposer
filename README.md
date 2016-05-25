@@ -1,10 +1,14 @@
-# srt parser
-A quick scrip to convert srt into plain text.
+# srt parser and composer
+A couple of modules to parse and generate srt files. external dependencies needed.
+
+## Parser
 Give an `srt` file it returns json or a plain text of all the lines.
-No external dependencies needed.
 
 
-## Srt file
+
+### Srt file
+See exampel in [`nroman_door_manual_transcription.srt`](./example/nroman_door_manual_transcription.srt)
+
 ```srt
 1
 00:00:00,160 --> 00:00:04,890
@@ -25,10 +29,10 @@ regularly.”
 How often? “like 30% of the time.”
 ```
 
-## Srt lines vs file lines
-In the comments I refer both to srt lines and file lines, so I thought I'd clarify.
+### Srt lines vs file lines
+In the code comments I refer both to srt lines and file lines, so I thought I'd clarify.
 
-### Srt flines
+#### Srt flines
 ```
 1
 00:00:00,160 --> 00:00:04,890
@@ -36,7 +40,7 @@ There’s this door on the 10th floor I just
 hate so much.
 ```
 
-### File lines
+#### File lines
 While in terms of file lines the following are all considered individual lines.
 ```
 1
@@ -54,26 +58,31 @@ There’s this door on the 10th floor I just
 hate so much.
 ```
 
-## 4 outputs - srt parser
-This module has 4 functions, they both take in an srt file as input.
-`parseSrtFileToJson` and `parseSrtFileToText`.
+### The srt parser has for possible outputs - srt parser
+The parser has 4 functions,
 
-## `parseSrtFileToJson`
+they both take in an srt file (file path/name) as input `parseSrtFileToJson` returns a json and `parseSrtFileToText` returns plain text without timecodes.
+
+You can also parse the content of an srt file, what I refer to as an `srt string` directly to plain text or json using using `parseSrtContentToJson` and `parseSrtContentToText`
+
+
+### `parseSrtFileToJson`
 `parseSrtFileToJson` returns a json like the one below.
 
 and can be used as follows.
 
 ```javascript
 //var parser = require("./index.js");
-//var srtFile = "./example/nroman_door_manual_transcription.srt"//a path to some srt file you want to open
+var srtParser  = require('./index.js').parser;
+var srtFile = './example/nroman_door_manual_transcription.srt'
 
-parseSrt(srtFile, function(res){
-   console.log(JSON.stringify(res))
- });
+srtParser.parseSrtFileToJson(srtFile, function(res){
+  console.log(JSON.stringify(res))
+});
 ```
 
 
-#### Example json output example
+##### Example json output example
 
 ```json
   {
@@ -110,20 +119,21 @@ parseSrt(srtFile, function(res){
 ]
 ```
 
-## `parseSrtFileToText`
+### `parseSrtFileToText`
 
 while `parseSrtFileToText` returns a plain text like the one below and can be used like so.
 
 ```javascript
-//var parser = require("./index.js");
-//var srtFile = "./example/nroman_door_manual_transcription.srt"
+var fs = require('fs');
+var srtParser  = require('./index.js').parser;
+var srtFile = './example/nroman_door_manual_transcription.srt'
 
-parseSrtToText(srtFile, function(res){
-   console.log(res)
- });
+srtParser.parseSrtFileToText(srtFile, function(res){
+  console.log(res)
+});
 ```
 
-### Plain text output Example
+#### Plain text output Example
 
 ```
 There’s this door on the 10th floor I just
@@ -139,23 +149,58 @@ Me too Kelsey.
 ```
 
 
-## working with srt string
+### working with srt string
 I was had a use case of a speech to text API that returned an srt file. but rather then returning the file, It was returning a string with the content of the srt file.
 
-So for flexibility, you can also parse the content of an srt file, what I refer to as an `srt string` directly to play text or json using.
+So for flexibility, you can also parse the content of an srt file, what I refer to as an `srt string` directly to plain text or json using.
 
 `parseSrtContentToJson` and `parseSrtContentToText`.
 
 And they give the same output as their file opening counterpart described above.
 Only difference they take in the content of the srt as a string rather then file path/name of the srt file.
 
-## Examples
+### Examples
 You can find an example `srt` in the example folder. And some example of the output int he `example_output` folder.
 
 you can run following command in terminal to try the example
 
 ```bash
 node parser_test.js
+```
+
+
+## Composer
+Give an `srt json` it returns an srt file either as a string content of the srt or as a path to where the srt file as been written to disk.
+
+For example of `srt json` specs see [`example_output/norman_door_human_transcription.json`](./example_output/norman_door_human_transcription.json)
+
+### Usage
+
+```javascript
+var fs = require('fs');
+var srtComposer  = require('./index.js').composer;
+
+var srtJson = './example_output/norman_door_human_transcription.json';
+var srtJsonContent = JSON.parse(fs.readFileSync(srtJson).toString());
+
+//creating srt string from json
+srtComposer.createSrtContent(srtJsonContent, function(srtString){
+  console.log(srtString)
+})
+
+//creating srt file from json
+var JsonToSrtTest = './example_output/composer_test_srt_from_json.srt';
+
+srtComposer.createSrtFile(JsonToSrtTest,srtJsonContent, function(resSrtFilePath){
+  console.log(resSrtFilePath)
+})
+```
+
+## Examples
+You can run the example with
+
+```bash
+node composer_test.js
 ```
 
 <!--
