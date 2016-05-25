@@ -204,6 +204,8 @@ srtComposer.createSrtFile(JsonToSrtTest,srtJsonContent, function(resSrtFilePath)
 Sometimes you want to share an srt and get some feedback on it.
 A google spreadsheet is generally the most effective. With this module you can convert your srt to a csv file, so that it can be uploaded to google spreadsheet, or some other use case.
 
+| First Header  | Second Header | Second Header | Second Header |
+| ------------- | ------------- | ------------- | ------------- |
 | 1  | 00:00:00,160  | 00:00:04,890   |There’s this door on the 10th floor I just hate so much.   |   
 | 2  | 00:00:04,890  | 00:00:05,798   |Goddammit!                                                 |   
 | 3  |  00:00:05,799 | 00:00:11,629   |Do you ever get this door wrong? “pretty regularly.”       |   
