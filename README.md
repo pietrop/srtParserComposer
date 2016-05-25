@@ -1,5 +1,5 @@
 # srt parser and composer
-A couple of modules to parse and generate srt files. external dependencies needed.
+A couple of modules to parse and generate srt files. No external dependencies needed.
 
 ## Parser
 Give an `srt` file it returns json or a plain text of all the lines.
