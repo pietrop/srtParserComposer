@@ -10,7 +10,7 @@ var fs = require('fs')
 * optional callback, that returns content of a csv file
 */
 function createCsvContent(srtJsonContent, cb){
-  var lines = "";
+  var lines = "N, In, Out, Text\n";
   for(var i=0; i< srtJsonContent.length; i++){
     srtLineO = srtJsonContent[i];
     lines+=srtLineO.id+",";
