@@ -1,7 +1,9 @@
 # srt parser and composer
 A couple of modules to parse and generate srt files. No external dependencies needed.
-I can parse an srt file or srt string (content of an srt file) into a json or plain text.
-It can also parse an srt file into a csv file.
+
+-  parse an srt file or srt string (content of an srt file) into a json or plain text.
+- create an srt file from json
+- parse an srt file into a csv file.
 
 ## Parser
 Give an `srt` file it returns json or a plain text of all the lines.
