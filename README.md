@@ -54,12 +54,12 @@ There’s this door on the 10th floor I just
 hate so much.
 ```
 
-## Two outputs
-This module has two functions, they both take in an srt file as input.
-`parseSrtToJson` and `parseSrtToText`.
+## 4 outputs - srt parser
+This module has 4 functions, they both take in an srt file as input.
+`parseSrtFileToJson` and `parseSrtFileToText`.
 
-## `parseSrtToJson`
-`parseSrtToJson` returns a json like the one below.
+## `parseSrtFileToJson`
+`parseSrtFileToJson` returns a json like the one below.
 
 and can be used as follows.
 
@@ -110,9 +110,9 @@ parseSrt(srtFile, function(res){
 ]
 ```
 
-## `parseSrtToText`
+## `parseSrtFileToText`
 
-while `parseSrtToText` returns a plain text like the one below and can be used like so.
+while `parseSrtFileToText` returns a plain text like the one below and can be used like so.
 
 ```javascript
 //var parser = require("./index.js");
@@ -137,6 +137,17 @@ All the time. Every day. Constantly.
 I hate this door.
 Me too Kelsey.
 ```
+
+
+## working with srt string
+I was had a use case of a speech to text API that returned an srt file. but rather then returning the file, It was returning a string with the content of the srt file.
+
+So for flexibility, you can also parse the content of an srt file, what I refer to as an `srt string` directly to play text or json using.
+
+`parseSrtContentToJson` and `parseSrtContentToText`.
+
+And they give the same output as their file opening counterpart described above.
+Only difference they take in the content of the srt as a string rather then file path/name of the srt file.
 
 ## Examples
 You can find an example `srt` in the example folder. And some example of the output int he `example_output` folder.

@@ -8,9 +8,27 @@ var fs = require('fs');
 
 // console.log(srtFile)
 
-function parseSrtContent(srtFile, cb){
+/**
+* takes in srt file path,
+* returns srt json
+*/
+function parseSrtFile(srtFile, cb){
+
+    var srt = fs.readFileSync(srtFile).toString();
+
+    parseSrtContent(srt, function(srtJson){
+      if(cb){cb(srtJson)}
+    })
+}
+
+
+/*
+* takes in srt string (content of a srt file)
+* returns srt json
+*/
+function parseSrtContent(srt, cb){
   //TODO: could be refactor to move opening file outside of this function, to that to allow for use case when parsing an srt string. eg Spoken data returns an srt through the API. but not as a file, as a string/
-  var srt = fs.readFileSync(srtFile).toString();
+
   //split srt string into array. where each element it's a line of the srt file.
   var srtArray = srt.split("\n")
   //define regex for recognising components of the srt file. number. timecodes, words in a line, empty space between lines
@@ -60,11 +78,34 @@ function parseSrtContent(srtFile, cb){
 
 }//parseSrt
 
+/*
+*   takes in an srt file path,
+*   and returns plain text of text in lines.
+*   no timecodes.
+*/
+function parseSrtFileToText(srtF, cb){
 
-function parseSrtToText(srtF, cb){
-
-  parseSrt(srtF, function(res){
+  parseSrtFile(srtF, function(res){
     var result = "";
+    //gets text attribute from srt json array elements
+    for(var j=0; j<res.length; j++){
+       result +=res[j].text;
+     }
+    cb(result)
+  })
+}
+
+
+/*
+* takes in an srt string (content of srt file),
+* and returns plain text of text in lines.
+* no timecodes.
+*/
+function parseSrtContentToText(srtF, cb){
+
+  parseSrtContent(srtF, function(res){
+    var result = "";
+    //gets text attribute from srt json array elements
     for(var j=0; j<res.length; j++){
        result +=res[j].text;
      }
@@ -73,20 +114,13 @@ function parseSrtToText(srtF, cb){
 }
 
 //parse srt file to json
-module.exports.parseSrtToJson =  parseSrt;
+module.exports.parseSrtFileToJson =  parseSrtFile;
 
 //parses srt file to text string
-module.exports.parseSrtToText = parseSrtToText;
+module.exports.parseSrtFileToText = parseSrtFileToText;
 
+//parse srt string (content of srt file) to json
+module.exports.parseSrtContentToJson =  parseSrtContent;
 
-
-//TEST
-// var srtFile = './nroman_door_manual_transcription.srt'
-
-// parseSrt(srtFile, function(res){
-//   console.log(JSON.stringify(res))
-// });
-
-// parseSrtToText(srtFile, function(res){
-//   console.log(res)
-// });
+//parses srt string (content of srt file)  to text string
+module.exports.parseSrtContentToText = parseSrtContentToText;
