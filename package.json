@@ -18,8 +18,11 @@
   "keywords": [
     "srt",
     "parser",
+    "composer",
+    "subtitles",
     "csv",
-    "json"
+    "json",
+    "srt_parser_composer"
   ],
   "bugs": {
     "url": "https://github.com/pietrop/srtParserComposer/issues"

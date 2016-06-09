@@ -123,4 +123,30 @@ module.exports.parseSrtFileToText = parseSrtFileToText;
 module.exports.parseSrtContentToJson =  parseSrtContent;
 
 //parses srt string (content of srt file)  to text string
-module.exports.parseSrtContentToText = parseSrtContentToText;
+module.exports.parseSrtContentToText = parseSrtContentToText
+
+
+///////////////////Word accurate lines ///////////
+var srtJsonToWordLineJson = require('./srtJsonToWordLinesJson.js').convertTowordsLines;
+
+function parseSrtFileToJsonWordsLines(srtFile, cb){
+  parseSrtFile(srtFile, function(res){
+    var result = srtJsonToWordLineJson(res);
+    if(cb){cb(result)}else{return result};
+  })
+}
+
+//
+function parseSrtContentToJsonWordsLines(srt, cb){
+  parseSrtContent(srt, function(srtJson){
+    // if(cb){cb(srtJson)}
+    var res = srtJsonToWordLineJson(srtJson);
+    if(cb){cb(res)}else{return res};
+  })
+}
+
+
+//
+module.exports.parseSrtFileToJsonWordsLines = parseSrtFileToJsonWordsLines;
+//
+module.exports.parseSrtContentToJsonWordsLines = parseSrtContentToJsonWordsLines

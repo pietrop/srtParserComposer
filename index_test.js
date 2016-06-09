@@ -72,3 +72,16 @@ var demoCsvFile = './example_output/demo_test.csv'
 srtToCsv(srtFile, demoCsvFile, function(resCsvPathFileName){
   console.log(resCsvPathFileName);
 })
+
+
+/*
+* word accurate json with lines
+*/
+
+srtParser.parseSrtContentToJsonWordsLines(srtStringContent, function(res){
+  console.log(res)
+});
+
+srtParser.parseSrtFileToJsonWordsLines(srtFile, function(res){
+  console.log(res)
+});

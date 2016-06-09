@@ -30,3 +30,12 @@ parser.parseSrtContentToJson(srtStringContent, function(res){
 parser.parseSrtContentToText(srtStringContent, function(res){
   console.log(res)
 });
+
+
+parser.parseSrtContentToJsonWordsLines(srtStringContent, function(res){
+  console.log(res)
+});
+
+parser.parseSrtFileToJsonWordsLines(srtFile, function(res){
+  console.log(res)
+});

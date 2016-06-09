@@ -1,6 +1,5 @@
 var parser = require('./parser.js');
 var composer = require('./composer.js');
-
 var csvComposer = require('./csv_composer.js');
 
 function srtToCsv(srtFile, newCsvFile, cb){

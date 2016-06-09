@@ -1,9 +1,11 @@
 # srt parser and composer
 A couple of modules to parse and generate srt files. No external dependencies needed.
 
--  parse an srt file or srt string (content of an srt file) into a json or plain text.
-- create an srt file from json
-- parse an srt file into a csv file.
+  - an srt file or srt string (content of an srt file) to json
+  - an srt file or srt string to plain text
+  - an srt file or srt string to json with lines and word level timings
+  - create srt file from json
+  - parse an srt file into a csv file.
 
 ## Usage
 
@@ -79,7 +81,7 @@ hate so much.
 ```
 
 ### The srt parser has four possible outputs - srt parser
-The parser has 4 functions,
+The parser has 6 main functions,
 
 they both take in an srt file (file path/name) as input `parseSrtFileToJson` returns a json and `parseSrtFileToText` returns plain text without timecodes.
 
@@ -140,6 +142,73 @@ srtParser.parseSrtFileToJson(srtFile, function(res){
 ...
 ]
 ```
+
+#### srt to word accurate time
+
+With [a bit of math](./srtJsonToWordLinesJson.js) the [parser](./parser/js) can also change the granualrity of the timecodes from srt line levels to word level accuracy.
+
+The timecodes are converted from fractional seconds of srt `HH:MM:SS,ms` (eg `00:00:17,500`) to seconds.
+
+Seconds have been chose because that's what's supported by the HTML5 Video API for attribute such as [`video.currentTime`](http://www.w3schools.com/tags/av_prop_currenttime.asp).
+
+The lines of the srt are preserved in the new data structure by generating an array of arrays containing words objects.
+
+such as the following
+
+#### Example output
+
+Output looks something like this
+
+```json
+[
+  [
+    {
+      "start": 4.89,
+      "end": 1.88,
+      "text": "There’s"
+    },
+    {
+      "start": 4.46,
+      "end": 2.74,
+      "text": "this"
+    },
+    {
+      "start": 4.029999999999999,
+      "end": 2.3099999999999996,
+      "text": "door"
+    },
+    ....
+  ]
+  ...
+]
+```
+
+See [`./example_outputsrtJsonToWordLineJson_sample.json`](./example_outputsrtJsonToWordLineJson_sample.json) for example file.
+
+### `parseSrtFileToJsonWordsLines`
+
+```javascript
+var parser = require('./parser.js');
+
+var srtFile = './example/nroman_door_manual_transcription.srt'
+srtParser.parseSrtFileToJsonWordsLines(srtFile, function(res){
+  console.log(res)
+});
+```
+
+
+### `parseSrtContentToJsonWordsLines`
+
+```javascript
+var parser = require('./parser.js');
+//second use case
+var srtStringContent = fs.readFileSync(srtFile).toString();
+
+srtParser.parseSrtContentToJsonWordsLines(srtStringContent, function(res){
+  console.log(res)
+});
+```
+
 
 ### `parseSrtFileToText`
 
@@ -218,6 +287,9 @@ srtComposer.createSrtFile(JsonToSrtTest,srtJsonContent, function(resSrtFilePath)
 })
 ```
 
+
+
+
 ## Srt file to CSV
 Sometimes you want to share an srt and get some feedback on it.
 A google spreadsheet is generally the most effective. With this module you can convert your srt to a csv file, so that it can be uploaded to google spreadsheet, or some other use case.
@@ -285,3 +357,8 @@ then reached the second line it adds it to the array of srt lines objects result
 
 And when the loop is finished this is returned to the callback.
   -->
+
+
+<!-- ## TODO
+- [ ] refactor with overloading so that srt can be either a string or a file path.  
+- [ ] srt word level with lines to srt json, and to srt file-->
